@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+    <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>My Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> &lt;!&ndash; Include Font Awesome CSS &ndash;&gt;-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Brionsoft/AccessEase@main/accessibility-widget.css">
+    <style>
+        body{
+            overflow-x:hidden;
+        }
+
+
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 10px;
+            width: 100%;
+            background-color: #fff; /* Customize the background color */
+            color: #000; /* Customize the text color */
+            padding: 20px 0;
+            text-align: left
+
+        }
+
+        .content {
+            margin-top: 90px; /* Adjust the margin to match the header height */
+        }
+
+        .header-text {
+          font-size: 30px;
+          font-weight: bold;
+          padding:0px;
+          background: -webkit-linear-gradient(#e855f2,#5555f2);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .number{
+            background-image: linear-gradient(-90deg,#3e64d6 0,#3e64d6 25%,#ecd7f5 50%,currentColor 51%,currentColor 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 100%;
+            background-position: left;
+            transition: background-position .4s ease;
+            background-position: right;
+            font-size: 25vh;
+        }
+
+        .discover{
+            padding-top: 10vh;
+            padding-bottom:10vh;
+            background:#faf7f7;
+        }
+
+        .btn-border{
+            color: #000;
+            border: 2px solid;
+            border-image-slice: 1;
+            border-image-source: linear-gradient(70deg,#57b8e0,#5762e2,#be8ec6);
+            background: 0 0;
+            width: fit-content;
+        }
+
+        .acc-use{
+                background-image: linear-gradient(white,#dae1f5, #ebcbf7, white);
+                padding: 1vh;
+        }
+
+        .acc-user-content{
+                font-size: small
+        }
+
+        .top-img{
+                height: 500px;
+                width: 50%;
+        }
+
+        .why-acessi-right{
+               padding-right:30vh;
+        }
+
+        .why-acessi-left{
+               padding-left:30vh;
+        }
+
+        .footer{
+            padding:10vh;
+        }
+
+        .phone{
+            display:none;
+        }
+
+        .laptop{
+            display:block;
+         }
+
+         .why-accessi-image{
+                 width:500px;
+                 height:300px
+            }
+
+
+        @media (max-width: 768px) {
+            .top-img{
+                height: 300px;
+                width: 100%;
+            }
+
+            .click-to-discover{
+                display:none;
+            }
+
+            .features{
+                text-align: center
+            }
+
+            .features-header{
+                padding-top:20px;
+            }
+
+            .why-acessi-right{
+                text-align: center;
+                padding-right:2vh;
+                padding-left:2vh;
+                padding-top:2vh;
+                padding-bottom:5vh;
+            }
+
+            .why-acessi-left{
+                text-align: center;
+                padding-right:2vh;
+                padding-left:2vh;
+                padding-top:2vh;
+                padding-bottom:5vh;
+            }
+
+            .footer{
+                padding:5vh;
+                padding-top: 10vh;
+            }
+            .laptop{
+                display:none;
+            }
+
+            .phone{
+                display:block;
+            }
+
+            .why-accessi-image{
+                 width:300px;
+                 height:200px
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="fixed-header">
+        <h1 class="header-text">Brionsoft</h1>
+    </header>
+    <div class="content">
+        <!-- Your content goes here -->
+        <div class="d-flex justify-content-center align-items-center">
+            <i class="fas fa-universal-access fa-5x"  style="color: #7b35fc;"></i>
+        </div>
+        <h1 class="text-center" >Unlock a More <span style="color:blue">Inclusive</span> Web Experience</h1>
+        <div class="d-flex justify-content-center align-items-center">
+            <img class ="top-img" src="pic2.png">
+        </div>
+<!--        <p class="text-center" style="color:gray; padding-bottom: 10vh">We've created the ultimate Accessibility Widget – a powerful tool that empowers users to customize their <br>online experience for greater comfort and inclusivity.</p>-->
+
+        <div class="row d-flex justify-content-center align-items-center discover">
+            <div class="col-lg-5 col-12">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide">
+<!--                    <div class="carousel-indicators">-->
+<!--                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
+<!--                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
+<!--                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
+<!--                    </div>-->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="acc1.png" alt="..." height="100%" width="100%">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="acc2.png" alt="..." height="100%" width="100%">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="acc3.png" alt="..." height="100%" width="100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="acc4.png" alt="..." height="100%" width="100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="acc5.png" alt="..." height="100%" width="100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="acc6.png" alt="..." height="100%" width="100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="acc7.png" alt="..." height="100%" width="100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="acc8.png" alt="..." height="100%" width="100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="acc9.png" alt="..." height="100%" width="100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="acc10.png" alt="..." height="100%" width="100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="acc11.png" alt="..." height="100%" width="100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="acc12.png" alt="..." height="100%" width="100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="acc13.png" alt="..." height="100%" width="100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="acc14.png" alt="..." height="100%" width="100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="acc15.png" alt="..." height="100%" width="100%">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-1 text-center click-to-discover">
+                <h3 style="font-family: cursive;">Click to <br> discover</h3>
+                <img src="arrow.png">
+                <br><br><br><br><br><br><br><br><br>
+            </div>
+            <div class="col-lg-5 col-12 features">
+                <h1 style="color: blue; font-weight:bold" class="features-header">AccessEase Widget</h1>
+                <br>
+                <div id="carouselExampleDark2" class="carousel carousel-dark slide features-content">
+<!--                    <div class="carousel-indicators">-->
+<!--                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
+<!--                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
+<!--                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
+<!--                    </div>-->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <div class="carousel-content">
+                                <h5>Font size</h5>
+                                <p>Adjust the size of text to make it larger or smaller for better readability.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <div class="carousel-content">
+                                <h5>Text spacing</h5>
+                                <p>Modify the space between characters for improved legibility.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-content">
+                                <h5>Line height</h5>
+                                <p>Adjust the vertical spacing between lines of text for enhanced readability.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-content">
+                                <h5>Text align</h5>
+                                <p>Change the alignment of text to left, right or center.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-content">
+                                <h5>Highlight links</h5>
+                                <p> Make clickable links more noticeable with highlighting.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-content">
+                                <h5>Dyslexia font</h5>
+                                <p>Enable a font designed to assist individuals with dyslexia in reading.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-content">
+                                <h5>Contrast</h5>
+                                <p>Modify the background and text contrast to improve visibility.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-content">
+                                <h5>Smart contrast</h5>
+                                <p> Automatically adjust contrast for optimal readability.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-content">
+                                <h5>High saturation</h5>
+                                <p>Increase color saturation for better visibility.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-content">
+                                <h5>Monochrome</h5>
+                                <p>Convert content to black and white for reduced visual distractions.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-content">
+                                <h5>Hide images</h5>
+                                <p>Disable images to focus on text content.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-content">
+                                <h5>Pause animations</h5>
+                                <p>Stop animations to reduce distractions and improve accessibility.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-content">
+                                <h5>Reading guide</h5>
+                                <p>Highlight and guide through text for easier reading.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-content">
+                                <h5>Large cursor</h5>
+                                <p>Increase the cursor size for better visibility.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-content">
+                                <h5>Speak text</h5>
+                                <p>Have the content read aloud for those with visual impairments or reading difficulties.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- More content -->
+        <div class="laptop">
+            <div class="row">
+                <div class="col-lg-6 col-12 d-flex justify-content-center align-items-center">
+                    <img src="text-size.jpeg" width="500px" height="300px">
+                </div>
+                <div class="col-lg-6 col-12 text-justify why-acessi-right">
+                    <div class="number">01</div>
+                    <h4>Enhanced Readability</h4>
+                    <p style="color:gray">Make text easier to read with customizable fonts, line heights, and text spacing. Say goodbye to eye strain!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-12 text-justify why-acessi-left">
+                    <div class="number">02</div>
+                    <h4>Enhanced Web Experience</h4>
+                    <p style="color:gray">Our widget enhances the overall web experience by making navigation easier, improving readability, and creating a visually engaging online environment.</p>
+                </div>
+                <div class="col-lg-6 col-12 d-flex justify-content-center align-items-center">
+                    <img src="contrast1.jpg" width="500px">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-12 d-flex justify-content-center align-items-center">
+                    <img src="hide-image.png" width="500px" height="300px">
+                </div>
+                <div class="col-lg-6 col-12 text-justify why-acessi-right">
+                    <div class="number">03</div>
+                    <h4>Optimize Your Web Journey</h4>
+                    <p style="color:gray">Simplify web pages, enabling users to declutter the interface, concentrate on vital content, and remove disruptive animations</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-12 text-justify why-acessi-left">
+                    <div class="number">04</div>
+                    <h4>Tailor Your Experience with Ease</h4>
+                    <p style="color:gray">Utilize our reading guide for enhanced readability, enjoy smoother navigation with a large cursor, and effortlessly consume content through text-to-speech functionality</p>
+                </div>
+                <div class="col-lg-6 col-12 d-flex justify-content-center align-items-center">
+                    <img src="cursor.gif" width="500px" height="300px">
+                </div>
+            </div>
+            <br>
+            <div class="row text-center" style="padding:5vh; padding-top:10vh">
+                <h1 style="font-weight:bolder">Tailored Accessibility Features for All,<br> Guided by WCAG Standards</h1>
+            </div>
+            <div class="row d-flex align-items-center justify-content-center" style="padding:10px">
+                <div class="col-lg-2 col-6">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Font size</h6>
+                            <hr>
+                            <p class="acc-user-content">Needed by individuals with low vision or visual impairments.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 1.4.4 - Resize Text</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Text spacing</h6>
+                            <hr>
+                            <p class="acc-user-content">Helpful for people with dyslexia or cognitive impairments.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 1.4.12 - Text Spacing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Font size</h6>
+                            <hr>
+                            <p class="acc-user-content"> Beneficial for users with reading disabilities or cognitive impairments.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG 1.4.8 - Visual Presentation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Text align</h6>
+                            <hr>
+                            <p class="acc-user-content"> Useful for various users, including those with cognitive disabilities.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 1.4.8 - Visual Presentation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Highlight links</h6>
+                            <hr>
+                            <p class="acc-user-content"> Aids users with low vision or motor disabilities.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 2.4.7 - Focus Visible</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center justify-content-center" style="padding:10px">
+                <div class="col-lg-2 col-6">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Dyslexia font</h6>
+                            <hr>
+                            <p class="acc-user-content"> Specifically designed for individuals with dyslexia.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 1.4.8 - Visual Presentation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Contrast</h6>
+                            <hr>
+                            <p class="acc-user-content">Essential for users with low vision or color blindness.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 1.4.3 - Contrast</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Smart Contrast</h6>
+                            <hr>
+                            <p class="acc-user-content"> Helps users with varying visual needs.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 1.4.3 - Contrast</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">High saturation</h6>
+                            <hr>
+                            <p class="acc-user-content"> Can benefit users with low vision or color blindness.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 1.4.3 - Contrast</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Monochrome</h6>
+                            <hr>
+                            <p class="acc-user-content">Useful for users with certain cognitive or sensory conditions.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 1.4.8 - Visual Presentation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center justify-content-center" style="padding:10px">
+                <div class="col-2">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Hide images</h6>
+                            <hr>
+                            <p class="acc-user-content">Supports users with slow internet connections or who prefer text-only content.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 1.1.1 - Non-text Content</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Pause animations</h6>
+                            <hr>
+                            <p class="acc-user-content"> Important for users with attention disorders or epilepsy.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 2.2.2 - Pause, Stop, Hide</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Reading guide</h6>
+                            <hr>
+                            <p class="acc-user-content">Helps users with cognitive disabilities or reading difficulties.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG 1.4.8 - Visual Presentation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Large cursor</h6>
+                            <hr>
+                            <p class="acc-user-content">Aids users with motor impairments or vision difficulties.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG 2.4.7 - Focus Visible</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Speak text</h6>
+                            <hr>
+                            <p class="acc-user-content">Essential for users with visual impairments or reading difficulties.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG 2.0 - Success Criteria</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="phone">
+            <h2 class="text-center" style="font-weight:bold; padding:6vh">Why AccessEase Widget</h2>
+            <div class="row">
+                <div class="col-lg-6 col-12 d-flex justify-content-center align-items-center">
+                    <img class="why-accessi-image" src="text-size.jpeg">
+                </div>
+                <div class="col-lg-6 col-12 text-justify why-acessi-right">
+                    <h4>Enhanced Readability</h4>
+                    <p style="color:gray">Make text easier to read with customizable fonts, line heights, and text spacing. Say goodbye to eye strain!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-12 d-flex justify-content-center align-items-center">
+                    <img class="why-accessi-image" src="contrast1.jpg">
+                </div>
+                <div class="col-lg-6 col-12 text-justify why-acessi-left">
+                    <h4>Enhanced Web Experience</h4>
+                    <p style="color:gray">Our widget enhances the overall web experience by making navigation easier, improving readability, and creating a visually engaging online environment.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-12 d-flex justify-content-center align-items-center">
+                    <img class="why-accessi-image" src="hide-image.png">
+                </div>
+                <div class="col-lg-6 col-12 text-justify why-acessi-right">
+                    <h4>Optimize Your Web Journey</h4>
+                    <p style="color:gray">Simplify web pages, enabling users to declutter the interface, concentrate on vital content, and remove disruptive animations</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-12 d-flex justify-content-center align-items-center">
+                    <img class="why-accessi-image" src="cursor.gif">
+                </div>
+                <div class="col-lg-6 col-12 text-justify why-acessi-left">
+                    <h4>Tailor Your Experience with Ease</h4>
+                    <p style="color:gray">Utilize our reading guide for enhanced readability, enjoy smoother navigation with a large cursor, and effortlessly consume content through text-to-speech functionality</p>
+                </div>
+            </div>
+            <br>
+            <div class="row text-center" style="padding:5vh;">
+                <h1 style="font-weight:bolder">Tailored Accessibility Features for All,<br> Guided by WCAG Standards</h1>
+            </div>
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-6" style="padding:10px">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Font size</h6>
+                            <hr>
+                            <p class="acc-user-content">Needed by individuals with low vision or visual impairments.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 1.4.4 - Resize Text</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" style="padding:10px">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Text spacing</h6>
+                            <hr>
+                            <p class="acc-user-content">Helpful for people with dyslexia or cognitive impairments.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 1.4.12 - Text Spacing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" style="padding:10px">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Font size</h6>
+                            <hr>
+                            <p class="acc-user-content"> Beneficial for users with reading disabilities or cognitive impairments.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG 1.4.8 - Visual Presentation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" style="padding:10px">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Text align</h6>
+                            <hr>
+                            <p class="acc-user-content"> Useful for various users, including those with cognitive disabilities.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 1.4.8 - Visual Presentation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" style="padding:10px">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Highlight links</h6>
+                            <hr>
+                            <p class="acc-user-content"> Aids users with low vision or motor disabilities.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 2.4.7 - Focus Visible</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" style="padding:10px">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Dyslexia font</h6>
+                            <hr>
+                            <p class="acc-user-content"> Specifically designed for individuals with dyslexia.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 1.4.8 - Visual Presentation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" style="padding:10px">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Contrast</h6>
+                            <hr>
+                            <p class="acc-user-content">Essential for users with low vision or color blindness.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 1.4.3 - Contrast</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" style="padding:10px">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Smart Contrast</h6>
+                            <hr>
+                            <p class="acc-user-content"> Helps users with varying visual needs.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 1.4.3 - Contrast</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" style="padding:10px">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">High saturation</h6>
+                            <hr>
+                            <p class="acc-user-content"> Can benefit users with low vision or color blindness.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 1.4.3 - Contrast</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" style="padding:10px">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Monochrome</h6>
+                            <hr>
+                            <p class="acc-user-content">Useful for users with certain cognitive or sensory conditions.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 1.4.8 - Visual Presentation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" style="padding:10px">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Hide images</h6>
+                            <hr>
+                            <p class="acc-user-content">Supports users with slow internet connections or who prefer text-only content.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 1.1.1 - Non-text Content</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" style="padding:10px">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Pause animations</h6>
+                            <hr>
+                            <p class="acc-user-content"> Important for users with attention disorders or epilepsy.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG Rule: 2.2.2 - Pause, Stop, Hide</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" style="padding:10px">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Reading guide</h6>
+                            <hr>
+                            <p class="acc-user-content">Helps users with cognitive disabilities or reading difficulties.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG 1.4.8 - Visual Presentation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" style="padding:10px">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Large cursor</h6>
+                            <hr>
+                            <p class="acc-user-content">Aids users with motor impairments or vision difficulties.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG 2.4.7 - Focus Visible</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" style="padding:10px">
+                    <div class="card acc-use border-0 shadow-lg">
+                        <div class="card-body">
+                            <h6 style="font-weight:bold">Speak text</h6>
+                            <hr>
+                            <p class="acc-user-content">Essential for users with visual impairments or reading difficulties.</p>
+                            <p class="acc-user-content" style="font-weight:bold; color:#5f6163">WCAG 2.0 - Success Criteria</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+<!--        <div class="row" style="background-image: url('bg2.png'); height:110vh; background-repeat: no-repeat;display: flex;justify-content: center; align-items: center;background-position: center;">-->
+<!--            <div class="text-center">-->
+<!--                <h1 class="header-text">Access for All <br> Bridging the Digital Divide.</h1>-->
+<!--            </div>-->
+<!--        </div>-->
+        <div class="row text-center">
+            <div class="col-lg-6 col-12 d-flex align-items-center justify-content-center" style="background-image: linear-gradient(60deg,rgba(202,151,210,.25) 0,rgba(148,123,225,.25) 17%,rgba(94,94,240,.25) 45%,rgba(93,145,239,.25) 83%,rgba(92,195,238,.25) 100%);height:30vh">
+                <div class="text-center">
+                    <h1>Request AccessEase</h1><br>info@brionsoft.com
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-12 d-flex align-items-center justify-content-center" style="background: #ecebed; height:30vh">
+                <div class="text-center">
+                    <h1>About Us</h1><br><a href="https://www.brionsoft.com" style="color:black">Brionsoft.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="row footer" style="background:linear-gradient(#dec0eb,#2c2c36); color:white; height:30vh; ">
+            <div class="col-lg-2 col-6">
+                <h6>AccessEase Widget</h6>
+                <p style="font-family: cursive">By Brionsoft</p>
+            </div>
+            <div class="col-lg-2 col-6">
+                Copyright © 2023
+                <br>Brionsoft Inc.,
+                <br>All Rights Reserved
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $('#carouselExampleDark').on('slide.bs.carousel', function (e) {
+        var slideIndex = $(e.relatedTarget).index();
+        $('#carouselExampleDark2').carousel(slideIndex);
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/Brionsoft/AccessEase@main/accessibility-widget.js" data-widget-key="CGBvKiZrpS2MTJtEyN7HYIHqoGogsALlk"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Brionsoft/AccessEase@main/accessibility-widget-style.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
